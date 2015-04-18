@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">CityGuide</string>
+
+    <array name="sectionTitle">
+        <item>Arpoador</item>
+        <item>Pão de Açúcar</item>
+        <item>Cristo Redentor</item>
+        <item>Arcos da Lapa</item>
+        <item>Maracanã</item>
+    </array>
+    <array name="sectionImage">
+        <item>tab_01</item>
+        <item>tab_02</item>
+        <item>tab_03</item>
+        <item>tab_04</item>
+        <item>tab_05</item>
+    </array>
+</resources>

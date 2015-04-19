@@ -4,7 +4,7 @@ import java.lang.reflect.Array;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Locale;
-
+import android.R.layout;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
@@ -13,8 +13,6 @@ import android.graphics.drawable.Drawable;
 import android.support.v13.app.FragmentPagerAdapter;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -26,7 +24,7 @@ public class Mapa extends Activity {
 
     SectionsPagerAdapter mSectionsPagerAdapter;
     ViewPager mViewPager;
-    public static String PACKAGE_NAME;
+    //public static String PACKAGE_NAME;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +67,7 @@ public class Mapa extends Activity {
         private static final String ARG_SECTION_NUMBER = "section_number";
         private int sectionNumber;
 
-        public static PlaceholderFragment newInstance (int sectionNumber) {
+        public static PlaceholderFragment newInstance(int sectionNumber) {
 
             PlaceholderFragment fragment = new PlaceholderFragment();
             Bundle args = new Bundle();
@@ -96,9 +94,9 @@ public class Mapa extends Activity {
             ImageView background = (ImageView) rootView.findViewById(R.id.background_image);
             String fragTitle = container.getResources().getStringArray(R.array.sectionTitle)[sectionNumber];
             String fragImage = container.getResources().getStringArray(R.array.sectionImage)[sectionNumber];
-            int imageResource = container.getResources().getIdentifier(fragImage, "drawable", getPackageName());
+            int imageResource = container.getResources().getIdentifier(fragImage, "drawable", rootView.getContext().getPackageName());
             Drawable imageDrawable = getResources().getDrawable(imageResource);
-            title.setText(fragImage);
+            title.setText(fragTitle);
             background.setImageDrawable(imageDrawable);
             return rootView;
         }

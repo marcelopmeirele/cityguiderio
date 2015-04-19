@@ -15,4 +15,18 @@
         <item>tab_04</item>
         <item>tab_05</item>
     </array>
+    <array name="LatStart">
+        <item>-22.9897814</item>
+        <item>-22.949648</item>
+        <item>-22.95162</item>
+        <item>-22.913789</item>
+        <item>-22.912109</item>
+    </array>
+    <array name="longStart">
+        <item>-43.192122</item>
+        <item>-43.156515</item>
+        <item>-43.21077</item>
+        <item>-43.181044</item>
+        <item>-43.230156</item>
+    </array>
 </resources>

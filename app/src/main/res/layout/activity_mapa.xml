@@ -10,9 +10,112 @@
         android:id="@+id/pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:layout_gravity="top"
+                android:src="@drawable/logo"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_gravity="top"
+                android:layout_marginTop="100dp">
+
+                <!--ImageView
+                    android:id="@+id/weather"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/logo"
+                android:backgroundTint="@color/cardview_dark_background"
+                android:layout_margin="20dp"/>
+
+            <TextView
+                android:id="@+id/temperature"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:textSize="48dp"
+                android:text="40oc"
+                android:fontFamily="Roboto-Thin"
+                android:textColor="#fff"
+                android:layout_margin="20dp"/-->
+
+                    <android.support.v7.widget.CardView
+                        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/card_location"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        card_view:cardCornerRadius="4dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_marginBottom="0dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:padding="12dp"
+                        android:gravity="top"
+                        android:visibility="gone"
+                        android:elevation="8dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center">
+
+                            <Button
+                                android:layout_height="match_parent"
+                                android:layout_width="wrap_content"
+                                android:id="@+id/daqui"
+                                android:drawableTop="@mipmap/ic_geolocation"
+                                android:padding="8dp"
+                                android:onClick="RequestLocation"
+                                android:textSize="12dp"
+                                android:text="Daqui"
+                                android:background="?android:attr/selectableItemBackground"/>
+
+                            <EditText
+                                android:layout_height="match_parent"
+                                android:layout_width="match_parent"
+                                android:id="@+id/adress"
+                                android:layout_margin="0dp"
+                                android:padding="12dp"
+                                android:textSize="12dp"
+                                android:hint="Ou digite seu endereço"/>
+
+                        </LinearLayout>
+
+
+                    </android.support.v7.widget.CardView>
+
+                <TextView android:id="@+id/section_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:shadowColor="@android:color/black"
+                    android:shadowDy="10"
+                    android:shadowRadius="25"
+                    android:gravity="bottom"
+                    android:textAllCaps="true"
+                    android:layout_marginTop="380dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:paddingRight="@dimen/activity_horizontal_margin"
+                    android:paddingTop="@dimen/activity_vertical_margin"
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:text="Quero ir ao"/>
+
+                </LinearLayout>
+
+        </LinearLayout>
 
         <android.support.v7.widget.CardView
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
@@ -26,7 +129,8 @@
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:padding="12dp"
-            android:layout_gravity="bottom">
+            android:layout_gravity="bottom"
+            android:elevation="4dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -38,9 +142,9 @@
                     android:layout_weight="8"
                     android:id="@+id/prev"
                     android:drawableTop="@mipmap/ic_prev"
-                    android:background="#fff"
                     android:padding="18dp"
-                    android:onClick="MovePrevious"/>
+                    android:onClick="MovePrevious"
+                    android:background="?android:attr/selectableItemBackground"/>
 
                 <Button
                     android:layout_height="match_parent"
@@ -48,10 +152,11 @@
                     android:layout_weight="1"
                     android:id="@+id/location"
                     android:drawableTop="@mipmap/ic_start"
-                    android:background="#fff"
+                    android:background="?android:attr/selectableItemBackground"
                     android:padding="12dp"
                     android:text="De onde?"
-                    android:textSize="12dp"/>
+                    android:textSize="12dp"
+                    android:onClick="DeOnde"/>
 
                 <Button
                     android:layout_height="match_parent"
@@ -59,10 +164,11 @@
                     android:layout_weight="1"
                     android:id="@+id/datetime"
                     android:drawableTop="@mipmap/ic_datetime"
-                    android:background="#fff"
+                    android:background="?android:attr/selectableItemBackground"
                     android:padding="12dp"
                     android:text="Quando?"
-                    android:textSize="12dp"/>
+                    android:textSize="12dp"
+                    android:onClick="Quando"/>
 
                 <Button
                     android:layout_height="match_parent"
@@ -70,10 +176,11 @@
                     android:layout_weight="1"
                     android:id="@+id/alarm"
                     android:drawableTop="@mipmap/ic_alarm"
-                    android:background="#fff"
+                    android:background="?android:attr/selectableItemBackground"
                     android:padding="12dp"
                     android:text="Alarme"
-                    android:textSize="12dp"/>
+                    android:textSize="12dp"
+                    android:onClick="Alarme"/>
 
                 <Button
                     android:layout_height="match_parent"
@@ -81,12 +188,12 @@
                     android:layout_weight="8"
                     android:id="@+id/next"
                     android:drawableTop="@mipmap/ic_next"
-                    android:background="#fff"
+                    android:background="?android:attr/selectableItemBackground"
                     android:padding="18dp"
-                    android:onClick="MoveNext"/>
+                    android:onClick="MoveNext"
+                    android:state_enabled="false"/>
             </LinearLayout>
 
         </android.support.v7.widget.CardView>
 
-    </LinearLayout>
 </FrameLayout>
